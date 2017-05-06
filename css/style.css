@@ -16,6 +16,6 @@ body {
 #result-city {
   margin-top: 2px;
   width: 400px;
-  border: 1px solid #404040;
-  box-shadow: 0 0 2px 2px #404040;
+  border: 1px solid ##e3e3e3;
+  box-shadow: 0 0 5px 2px #e1e1e1;
 }
