@@ -23,12 +23,12 @@ var updateResults = function () {
       c = true;
       var d = document.createElement("p");
       d.innerText = cities[x].City;
-      d.setAttribute("onclick", "autocompleteCity.value=this.innerText;resultCity.innerHTML=';resultCity.style.display='none';");
+      d.setAttribute("onclick", "autocompleteCity.value=this.innerText;resultCity.innerHTML='';resultCity.style.display='none';");
       b.appendChild(d);
     }
   }
   if(c === true) {
-    resultCity.innerHTML = '';
+    resultCity.innerHTML = "";
     resultCity.style.display = "block";
     resultCity.appendChild(b);
     return;
@@ -37,6 +37,6 @@ var updateResults = function () {
 }
 
 //Listeners
-autocompleteCity.addEventListener("keydown", updateResults);
+autocompleteCity.addEventListener("keyup", updateResults);
 autocompleteCity.addEventListener("change", updateResults);
 autocompleteCity.addEventListener("focus", updateResults);
