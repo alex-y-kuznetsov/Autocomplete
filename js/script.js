@@ -1,6 +1,7 @@
 'use strict';
 
 //Variables
+var ESCAPE_KEY_CODE = 27;
 var resultCity = document.getElementById("result-city");
 var autocompleteCity = document.getElementById("autocomplete-city");
 var cities = window.citiesArray;
@@ -36,7 +37,12 @@ var updateResults = function () {
   toggleResultCity();
 }
 
+close
+
 //Listeners
 autocompleteCity.addEventListener("keyup", updateResults);
 autocompleteCity.addEventListener("change", updateResults);
 autocompleteCity.addEventListener("focus", updateResults);
+autocompleteCity.addEventListener("keyup", function(e){
+  e.keyCode == ESCAPE_KEY_CODE && (resultCity.style.display = "none")
+}, false);
