@@ -33,11 +33,13 @@ var updateResults = function () {
     resultCity.style.display = "block";
     resultCity.appendChild(b);
     return;
+  } else {
+    resultCity.innerText = "Не найдено";
+    resultCity.style.display = "block";
+    returnж
   }
   toggleResultCity();
 }
-
-close
 
 //Listeners
 autocompleteCity.addEventListener("keyup", updateResults);
