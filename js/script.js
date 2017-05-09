@@ -36,7 +36,7 @@ var updateResults = function () {
   } else {
     resultCity.innerText = "Не найдено";
     resultCity.style.display = "block";
-    returnж
+    return;
   }
   toggleResultCity();
 }
